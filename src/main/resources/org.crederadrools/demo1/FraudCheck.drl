@@ -1,0 +1,9 @@
+package org.crederadrools.runRules;
+
+import org.crederadrools.facts.Account;
+
+rule ""
+    when
+
+    then
+end

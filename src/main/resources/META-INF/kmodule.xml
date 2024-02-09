@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<kmodule
+         xmlns="http://www.drools.org/xsd/kmodule">
+    <kbase packages="org.crederadrools.demo1">
+        <ksession name="StatelessFraudCheckdemo1"/>
+    </kbase>
+
+    <kbase packages="org.crederadrools.demo2">
+        <ksession name="StatefulFraudCheckdemo2"/>
+    </kbase>
+</kmodule>
