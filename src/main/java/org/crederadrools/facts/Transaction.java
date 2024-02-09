@@ -10,7 +10,7 @@ public class Transaction {
 
     private String sender;
     private String transferMethod;
-    private float Amount;
+    private int Amount;
 
     private LocalDateTime transactionTime;
 
@@ -56,11 +56,11 @@ public class Transaction {
         this.transferMethod = transferMethod;
     }
 
-    public float getAmount() {
+    public int getAmount() {
         return Amount;
     }
 
-    public void setAmount(float amount) {
+    public void setAmount(int amount) {
         Amount = amount;
     }
 
@@ -81,13 +81,13 @@ public class Transaction {
     }
 
     public Transaction(int receivingAccountNumber, int sendingAccountNumber, String receipient, String sender,
-                       String transferMethod, float amount, LocalDateTime transactionTime) {
+                       String transferMethod, int amount, LocalDateTime transactionTime) {
         this.receivingAccountNumber = receivingAccountNumber;
         this.sendingAccountNumber = sendingAccountNumber;
         this.receipient = receipient;
         this.sender = sender;
         this.transferMethod = transferMethod;
-        Amount = amount;
+        this.Amount = amount;
         this.transactionTime = transactionTime;
         this.status = Status.PENDING;
     }

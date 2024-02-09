@@ -3,12 +3,13 @@ package org.crederadrools.facts;
 import java.time.LocalDateTime;
 
 public class TransactionBuilder {
+
     private int receivingAccountNumber;
     private int sendingAccountNumber;
     private String receipient;
     private String sender;
-    private String transferMethod;
-    private float amount;
+    private String transferMethod = "Normal";
+    private int amount;
     private LocalDateTime transactionTime;
 
     public TransactionBuilder setReceivingAccountNumber(int receivingAccountNumber) {
@@ -36,7 +37,7 @@ public class TransactionBuilder {
         return this;
     }
 
-    public TransactionBuilder setAmount(float amount) {
+    public TransactionBuilder setAmount(int amount) {
         this.amount = amount;
         return this;
     }

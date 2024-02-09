@@ -9,6 +9,7 @@ public class AccountBuilder {
     private int accountNumber;
     private float balance;
     private List<Account> knownRecipients;
+    private String country = "UK";
 
     public AccountBuilder setTransactions(List<Transaction> transactions) {
         this.transactions = transactions;
@@ -39,8 +40,13 @@ public class AccountBuilder {
         this.knownRecipients = knownRecipients;
         return this;
     }
+    public AccountBuilder setCountry(String country) {
+        this.country = country;
+        return this;
+    }
 
     public Account createAccount() {
-        return new Account(transactions, pendingTransactions, accountName, accountNumber, balance, knownRecipients);
+        return new Account(transactions, pendingTransactions, accountName, accountNumber, balance, knownRecipients, country);
     }
+
 }

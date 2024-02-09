@@ -15,6 +15,16 @@ public class Account {
 
     private List<Account> knownRecipients;
 
+    private String Country;
+
+    public String getCountry() {
+        return Country;
+    }
+
+    public void setCountry(String country) {
+        Country = country;
+    }
+
     public List<Account> getKnownRecipients() {
         return knownRecipients;
     }
@@ -64,13 +74,14 @@ public class Account {
         this.balance = balance;
     }
 
-    public Account(List<Transaction> transactions, List<Transaction> pendingTransactions, String accountName, int accountNumber, float balance, List<Account> knownRecipients) {
+    public Account(List<Transaction> transactions, List<Transaction> pendingTransactions, String accountName, int accountNumber, float balance, List<Account> knownRecipients, String country) {
         this.transactions = transactions;
         this.pendingTransactions = pendingTransactions;
         this.accountName = accountName;
         this.accountNumber = accountNumber;
         this.balance = balance;
         this.knownRecipients = knownRecipients;
+        this.Country = country;
     }
 
     @Override
